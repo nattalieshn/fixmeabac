@@ -6,6 +6,23 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+
+	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+	<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD9wBjZlpm2qOyUlnzh4Ax_8a22p2kTayo",
+    authDomain: "fixmeabac.firebaseapp.com",
+    databaseURL: "https://fixmeabac.firebaseio.com",
+    projectId: "fixmeabac",
+    storageBucket: "fixmeabac.appspot.com",
+    messagingSenderId: "483379790841"
+  };
+  firebase.initializeApp(config);
+	</script>
+
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">

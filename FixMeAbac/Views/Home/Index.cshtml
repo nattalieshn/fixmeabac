@@ -1,6 +1,22 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<head>
+
+	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+	<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD9wBjZlpm2qOyUlnzh4Ax_8a22p2kTayo",
+    authDomain: "fixmeabac.firebaseapp.com",
+    databaseURL: "https://fixmeabac.firebaseio.com",
+    projectId: "fixmeabac",
+    storageBucket: "fixmeabac.appspot.com",
+    messagingSenderId: "483379790841"
+  };
+  firebase.initializeApp(config);
+	</script>
+</head>
 
 <div class="jumbotron">
     <h1>ASP.NET</h1>

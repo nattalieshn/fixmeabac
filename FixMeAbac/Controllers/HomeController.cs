@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FireSharp.Config;
+using FireSharp.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,23 +10,23 @@ namespace FixMeAbac.Controllers
 {
 	public class HomeController : Controller
 	{
-		public ActionResult Index()
-		{
-			return View();
-		}
-
-		public ActionResult About()
-		{
-			ViewBag.Message = "Your application description page.";
-
-			return View();
-		}
-
-		public ActionResult Contact()
+		public ActionResult Home()
 		{
 			ViewBag.Message = "Your contact page.";
 
+			IFirebaseConfig config = new FirebaseConfig
+			{
+				AuthSecret = "AIzaSyD9wBjZlpm2qOyUlnzh4Ax_8a22p2kTayo",
+				BasePath = "https://fixmeabac.firebaseio.com/"
+			};
+
 			return View();
 		}
+
+		public ActionResult Detail()
+		{
+			return View();
+		}
+
 	}
 }
